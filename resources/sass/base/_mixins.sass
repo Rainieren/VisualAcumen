@@ -1,0 +1,62 @@
+@import "variables"
+// Main button mixin
+
+@mixin main-button
+    padding: 0 16px
+    transition: all .3s
+    cursor: pointer
+    border-radius: 3px
+    display: inline-block
+    height: 32px
+    font-weight: 500
+    font-size: .875rem
+    line-height: 30px
+
+//  Sub sidebar content blocks
+@mixin sub-sidebar-content-block
+    position: absolute
+    width: 100%
+    color: $text-white
+
+// Sub sidebar slideout
+@mixin slide-out-block
+    display: none
+    background: white
+    position: absolute
+    width: 600px
+    height: 100vh
+    top: 0
+    padding: 30px 17px 25px 17px
+    z-index: 2
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
+
+@mixin slide-out-overlay
+    display: none
+    background-color: $visual_primary_overlay
+    width: 100%
+    height: 100vh
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 2
+
+@mixin sub-sidebar-item-hover
+    transition: all .3s
+    cursor: pointer
+    width: 30px
+    height: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    margin: auto
+    font-size: 18px
+    background-color: $visual_primary_hover
+
+@mixin sidebar-item
+    font-size: 18px
+    width: 30px
+    height: 30px
+    margin: auto
+    transition: all .3s
+    line-height: 30px

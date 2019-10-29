@@ -85,6 +85,23 @@
                 <div class="container">
                     <div class="col-md-12 text-center">
                         <h1>Visual Acumen</h1>
+                        <p>Insight in your business</p>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a href="" class="btn btn-primary">Submit</a>
+                            <a href="" class="btn btn-danger">Close</a>
+                            <a href="" class="btn btn-success">Add</a>
+                            <a href="" class="btn btn-warning">Delete anyway</a>
+                            <a href="" class="btn btn-light-main">Main</a>
+                        </div>
+                        <div class="col-md-12 mt-5 text-left">
+                            <div class="form-group">
+                                <label for="gerard">Naam</label>
+                                <input type="text" id="gerard" class="form-control" placeholder="Gerard">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
