@@ -1,0 +1,56 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+// Primary button
+.btn.btn-primary
+    @include main-button
+    color: #fff
+    background-color: $visual_primary_main
+    border-color: $visual_primary_main
+    &:hover
+        background-color: $visual_primary_alt
+        border-color: $visual_primary_alt
+
+// Primary outline button
+.btn-outline-primary
+    @include main-button
+    color: $visual_primary_main
+    border-color: $visual_primary_main
+    &:hover
+        color: $visual_primary_main
+        background-color: $visual_primary_background-alt
+
+// Warning button
+.btn.btn-warning
+    @include main-button
+    background-color: $visual_yellow
+    border-color: $visual_yellow
+    &:hover
+        color: $text-black
+        border-color: $visual_yellow-alt
+        background-color: $visual_yellow-alt
+
+// Danger button
+.btn.btn-danger
+    @include main-button
+    background-color: $visual_red
+    border-color: $visual_red
+    &:hover
+        background-color: $visual_red-alt
+        border-color: $visual_red-alt
+
+.btn.btn-success
+    @include main-button
+    background-color: $visual_green
+    border-color: $visual_green
+    &:hover
+        background-color: $visual_green-alt
+        border-color: $visual_green-alt
+
+.btn.btn-light-main
+    @include main-button
+    background-color: $visual_primary_background-alt
+    border-color: $visual_primary_background-alt
+    &:hover
+        background-color: #BABBBF
+        border-color: #BABBBF
