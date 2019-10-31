@@ -1,0 +1,244 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+.dashboard-sub-sidebar
+    width: 64px
+    background-color: $visual_primary_main
+    position: fixed
+    display: block
+    top: 0
+    left: 0
+    height: 100vh
+    padding: 24px 0 24px 0
+    z-index: 1
+    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.4)
+    .dashboard-sub-sidebar-container
+        height: 100%
+        width: 100%
+        position: relative
+        // Top content
+        .dashboard-sub-top-content
+            @include sub-sidebar-content-block
+            top: 0
+        // Bottom content
+        .dashboard-sub-user-content
+            @include sub-sidebar-content-block
+            bottom: 0
+            .dashboard-sub-sidebar-user-image
+                cursor: pointer
+                height: 24px
+                width: 24px
+                object-fit: cover
+                border-radius: 50%
+            .dashboard-sub-help-block
+                @include sidebar-item
+                &:hover
+                    @include sub-sidebar-item-hover
+
+
+//          SIDEBAR SLIDEOUT BOX STYLING
+.sidebar-icon-box
+    @include sidebar-item
+    &:hover
+        @include sub-sidebar-item-hover
+//.slideout
+//  cursor: pointer
+//  &:hover
+//    @include sidebar-item-hover
+
+.dashboard-sidebar
+    .slideout
+        cursor: pointer
+        .dashboard-sidebar-listitem
+            &:hover
+                background-color: $visual_primary_hover
+
+.dropdown-menu.show
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.31) 0px 0px 1px
+    left: 10px !important
+    top: -20px !important
+    width: 170px
+    .list-unstyled
+        margin-bottom: 0
+        .list-title
+            padding: 8px 12px
+            display: flex
+            align-items: center
+            text-transform: uppercase
+            line-height: 1
+            font-size: 11px
+            color: rgb(107, 119, 140)
+        .list-item
+            padding: 8px 12px 7px
+            display: flex
+            align-items: center
+            cursor: pointer
+            color: rgb(23, 43, 77)
+            font-size: 13px
+            a
+                color: $visual_primary_text-color
+                &:hover
+                    text-decoration: none
+            &:hover
+                text-decoration: none
+                background-color: $visual_primary_background-alt
+
+.dashboard-sub-sidebar
+    .slideout
+        cursor: pointer
+        &:hover
+            @include sub-sidebar-item-hover
+
+// Slideout search block
+.search-block
+    @include slide-out-block
+
+// Slideout search block overlay
+.block-overlay
+    @include slide-out-overlay
+
+
+.overlay-active
+    display: block
+
+//  Notification block
+.notification-block
+    @include slide-out-block
+    .notification-header
+        display: flex
+
+
+//  Dashboard MAIN sidebar
+.dashboard-sidebar
+    transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s
+    width: 250px
+    height: 100vh
+    background-color: $visual_primary_main
+    position: fixed
+    top: 0
+    left: 64px
+    display: block
+    padding: 15px
+    color: $text-white
+    .dashboard-sidebar-toggle
+        position: absolute
+        right: -15px
+        border-radius: 50%
+        top: 35px
+        z-index: 2
+
+    .devider
+        border: 1px solid $visual_primary_alt
+        border-radius: 5px
+
+    .dashboard-sub-content
+
+        .dashboard-sidebar-link
+            &:hover
+                text-decoration: none
+            li
+                &:hover
+                    transition: all .3s
+                    background: $visual_primary_hover
+
+        .dashboard-sidebar-link.slideout-item
+            .dashboard-sidebar-listitem
+                &:after
+                    display: none
+                    font-family: "Font Awesome 5 Pro"
+                    content: "\f0a9"
+                    font-weight: 800
+                    position: absolute
+                    right: 20px
+                    font-size: 18px
+                &:hover
+                    &:after
+                        display: block
+
+        .sidebar-sub-heading
+            padding-left: 12px
+            text-transform: uppercase
+            padding-right: 12px
+            line-height: 1.5
+            font-weight: 600
+            h6
+                font-size: 12px
+
+
+
+
+.dashboard-sidebar-listitem
+    position: relative
+    padding-left: 12px
+    padding-right: 12px
+    color: $text-white
+    border-radius: 4px
+    height: 40px
+    display: flex
+    align-items: center
+    font-size: 14px
+    &.active
+        background-color: $visual_primary_alt
+    .dashboard-listitem-arrow
+        display: none
+        position: absolute
+        right: 0
+        margin-right: 12px
+    i
+        font-size: 20px
+        width: 24px
+        height: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 16px
+
+.dashboard-sidebar-brand
+    display: block
+    padding: 20px 20px 20px
+    height: 86px
+    color: $text-white
+
+.dashboard-sidebar-slideout
+    display: none
+    transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s
+    width: 250px
+    height: 100vh
+    background-color: $visual_primary_main
+    position: fixed
+    top: 0
+    left: 64px
+    padding: 15px
+    color: $text-white
+    z-index: 2
+
+.slideout-block-content
+    margin-left: 64px
+
+
+// SIDEBAR ACTIVE STATE
+#dashboard-sidebar.dashboard-sidebar-active
+    transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s
+    padding: 10px
+    width: 0
+    .dashboard-sidebar-brand
+        display: none
+    .dashboard-sub-content
+        display: none
+    .dashboard-sidebar-toggle
+        transition: all .3s
+        transform: rotate(180deg)
+
+
+.notification-dot
+    position: absolute
+    font-size: 11px
+    width: 10px
+    height: 10px
+    background-color: red
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    top: 3px
+    right: 22px
