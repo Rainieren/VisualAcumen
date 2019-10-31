@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Visual Acumen</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-{{--    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/all.css">--}}
-{{--    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/all.min.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.min.css') }}">
 </head>
 <body>
 
@@ -19,7 +18,7 @@
         <div class="dashboard-main">
             <ul class="dashboard-sub-content list-unstyled">
                 <a href="index.html" class="dashboard-sidebar-link">
-                    <li class="dashboard-sidebar-listitem"><i class="fal fa-window-maximize"></i>Dashboard</li>
+                    <li class="dashboard-sidebar-listitem active"><i class="fal fa-window-maximize"></i>Dashboard</li>
                 </a>
                 <a href="projects.html" class="dashboard-sidebar-link">
                     <li class="dashboard-sidebar-listitem"><i class="fal fa-folder"></i>Projects</li>
@@ -28,8 +27,8 @@
                     <li class="dashboard-sidebar-listitem"><i class="fal fa-user-tie"></i>Clients</li>
                 </a>
 
-                <a href="invoices.html" class="dashboard-sidebar-link slideout slideout-item" data-slideout-item="invoices">
-                    <li class="dashboard-sidebar-listitem active"><i class="fal fa-file-invoice"></i>Invoices</li>
+                <a href="#" class="dashboard-sidebar-link slideout slideout-item" data-slideout-item="invoices">
+                    <li class="dashboard-sidebar-listitem"><i class="fal fa-file-invoice"></i>Invoices</li>
                 </a>
 
                 <a href="employees.html" class="dashboard-sidebar-link">
@@ -134,15 +133,24 @@
                 </div>
 
                 <div class="btn-group dropright">
-                    <img src="../../img/profile.jpg" class="dashboard-sub-sidebar-user-image dropdown-toggle" alt="" width="40" height="40" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://stockphoto.com/assets/landingpage/images/Depositphotos_149433254_m-2015.jpg" class="dashboard-sub-sidebar-user-image dropdown-toggle" alt="" width="40" height="40" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu">
                         <ul class="list-unstyled">
                             <div class="list-title">Rainier laan</div>
                             <li class="list-item"><a href="">Profiel</a></li>
                             <li class="list-item"><a href="">Account instellingen</a></li>
-                            <li class="list-item"><a href="../login.html">Uitloggen</a></li>
+                            <li class="list-item"><a href="{{ route('logout') }}"
+                                                     onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    Uitloggen
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+
                             <div class="list-title">Admin options</div>
-                            <li class="list-item"><a href="admin_preferences.html">Preferences</a></li>
+                            <li class="list-item"><a href="">Preferences</a></li>
                         </ul>
                     </div>
                 </div>
@@ -186,14 +194,16 @@
 </div>
 
 <div id="content-container" class="content-container">
-    @yield('content')
+    <div id="app">
+        @yield('content')
+    </div>
 </div>
 
 
+<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-{{--<script type="text/javascript" src="../../js/fontawesome.js"></script>--}}
-{{--<script type="text/javascript" src="../../js/fontawesome.min.js"></script>--}}
+<script type="text/javascript" src="{{ asset('js/fontawesome.js') }}"></script>
 
 
 </body>
