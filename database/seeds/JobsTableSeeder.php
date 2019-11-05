@@ -13,11 +13,20 @@ class JobsTableSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create();
 
         DB::table('jobs')->insert([
             'name' => 'CEO',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
+
+        foreach(range(1,24) as $index) {
+            DB::table('jobs')->insert([
+                'name' => $faker->jobTitle,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        }
     }
 }

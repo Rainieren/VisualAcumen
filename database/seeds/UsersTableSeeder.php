@@ -33,18 +33,18 @@ class UsersTableSeeder extends Seeder
             'timezone' => $faker->timezone,
             'last_seen' => Carbon::now(),
             'ip_address' => '127.0.0.1',
-            'password' => bcrypt('Gab7152la'),
+            'password' => bcrypt('welkom'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
         foreach(range(1,49) as $index) {
             DB::table('users')->insert([
-                'job_id' => $faker->numberBetween(0, 10),
-                'company_id' => $faker->numberBetween(0, 10),
-                'role_id' => $faker->numberBetween(0, 10),
-                'department_id' => $faker->numberBetween(0, 10),
-                'contract_id' => $faker->numberBetween(0, 10),
+                'job_id' => $faker->numberBetween(1, 24),
+                'company_id' => $faker->numberBetween(1, 10),
+                'role_id' => $faker->numberBetween(1, 10),
+                'department_id' => $faker->numberBetween(1, 10),
+                'contract_id' => $faker->numberBetween(1, 10),
                 'username' => $faker->userName,
                 'firstname' => $faker->firstName(null),
                 'middlename' => $faker->name,

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -13,7 +15,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('Project.show');
+        $projects = Auth::user()->company->projects;
+        $recent = Project::orderBy('created_at', 'desc')->take(3)->get();
+
+        return view('Project.show', compact('projects', 'recent'));
     }
 
     /**
@@ -34,7 +39,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = Project::create([
+            'company_id' => Auth::user()->company->id,
+            'name' => request('name'),
+            'description' => request('description'),
+            'color' => request('color')
+        ]);
+
+        return redirect('projects');
     }
 
     /**

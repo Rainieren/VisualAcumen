@@ -35,6 +35,16 @@ $(document).ready(function() {
         }
     });
 
+    $('.form-slideout').on('click', function() {
+        var form_slideout = $('.data-form-slideout-' + $(this).data('form-slideout'));
+        form_slideout.toggle("slide", { direction: "left" }, 250);
+    });
+
+    $('.form-slidein').on('click', function() {
+        var form_slidein = $('.data-form-slideout-' + $(this).data('form-slidein'));
+        form_slidein.toggle("slide", { direction: "left" }, 250);
+    });
+
     $('#slide-next').on('click', function() {
         $('.register-form-user').toggle("slide", { direction: "left" }, 250);
         $('.register-form-company').toggle("slide", { direction: "right" }, 250);

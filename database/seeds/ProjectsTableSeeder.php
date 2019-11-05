@@ -20,6 +20,7 @@ class ProjectsTableSeeder extends Seeder
                 'company_id' => $faker->numberBetween(0, 10),
                 'name' => $faker->bs,
                 'description' => $faker->realText(),
+                'color' => $faker->hexColor,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
