@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model
+class Job extends Model
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -13,12 +13,5 @@ class Company extends Model
     {
         return $this->hasMany(User::class);
     }
-
-    /*
-     *
-     */
-    public function projects()
-    {
-        return $this->hasMany(Project::class);
-    }
 }
+

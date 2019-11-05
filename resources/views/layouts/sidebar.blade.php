@@ -17,11 +17,11 @@
 
         <div class="dashboard-main">
             <ul class="dashboard-sub-content list-unstyled">
-                <a href="index.html" class="dashboard-sidebar-link">
-                    <li class="dashboard-sidebar-listitem active"><i class="fal fa-window-maximize"></i>Dashboard</li>
+                <a href="{{ route('home') }}" class="dashboard-sidebar-link">
+                    <li class="dashboard-sidebar-listitem {{ request()->is('home') ? 'active' : '' }}"><i class="fal fa-window-maximize"></i>Dashboard</li>
                 </a>
-                <a href="projects.html" class="dashboard-sidebar-link">
-                    <li class="dashboard-sidebar-listitem"><i class="fal fa-folder"></i>Projects</li>
+                <a href="{{ route('projects') }}" class="dashboard-sidebar-link">
+                    <li class="dashboard-sidebar-listitem {{ request()->is('projects') ? 'active' : '' }}"><i class="fal fa-folder"></i>Projects</li>
                 </a>
                 <a href="#" class="dashboard-sidebar-link slideout slideout-item" data-slideout-item="clients">
                     <li class="dashboard-sidebar-listitem"><i class="fal fa-user-tie"></i>Clients</li>
@@ -34,10 +34,11 @@
                 <a href="employees.html" class="dashboard-sidebar-link">
                     <li class="dashboard-sidebar-listitem"><i class="fal fa-user-friends"></i>Employees</li>
                 </a>
-
-                <a href="your_company.html" class="dashboard-sidebar-link">
-                    <li class="dashboard-sidebar-listitem"><i class="fal fa-building"></i>My company</li>
-                </a>
+                @if(Auth::user()->isCompanyOwner())
+                    <a href="your_company.html" class="dashboard-sidebar-link">
+                        <li class="dashboard-sidebar-listitem"><i class="fal fa-building"></i>My company</li>
+                    </a>
+                @endif
             </ul>
         </div>
 

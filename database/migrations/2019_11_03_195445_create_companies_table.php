@@ -24,7 +24,7 @@ class CreateCompaniesTable extends Migration
             $table->string('state');
             $table->string('city');
             $table->string('company_logo');
-            $table->integer('phonenumber');
+            $table->text('phonenumber');
             $table->timestamps();
         });
     }
