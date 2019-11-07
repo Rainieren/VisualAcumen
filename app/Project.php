@@ -13,7 +13,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'company_id', 'name', 'description', 'color'
+        'company_id', 'name', 'description', 'color', 'code', 'responsible_id', 'projecttype_id'
     ];
 
     /**
@@ -30,5 +30,13 @@ class Project extends Model
     public function company()
     {
         return $this->belongsTo(Company::class);
+    }
+
+    /*
+     *
+     */
+    public function projecttype()
+    {
+        return $this->belongsTo(ProjectType::class);
     }
 }

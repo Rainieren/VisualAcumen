@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aff4aec6-ff54-445c-8626-b9ff77e37bf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/ProjectType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_06_170107_create_project_types_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ProjectTypesTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Project/projects.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_03_195620_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_03_195620_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/JobsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/JobsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/ProjectsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProjectsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/base/typography.sass" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/base/typography.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components/_content.sass" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/_content.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Project/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Project/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,8 +127,11 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1S79szGzWuSEwtfh24IB22HJamH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ICT-Hulp" />
@@ -194,6 +193,8 @@
       <workItem from="1572811160754" duration="2473000" />
       <workItem from="1572971996674" duration="6494000" />
       <workItem from="1572978653987" duration="13619000" />
+      <workItem from="1573040254644" duration="7164000" />
+      <workItem from="1573057567097" duration="4347000" />
     </task>
     <servers />
   </component>
@@ -212,5 +213,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -16,11 +16,26 @@ class ProjectsTableSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         foreach(range(1,15) as $index) {
+
+            $name = $faker->bs;
+            $words = explode(" ", $name);
+            $code = "";
+
+            if(count($words) > 0) {
+                foreach($words as $word) {
+                    $code .= $word[0];
+                }
+            }
+
+
             DB::table('projects')->insert([
-                'company_id' => $faker->numberBetween(0, 10),
-                'name' => $faker->bs,
+                'company_id' => $faker->numberBetween(1, 10),
+                'name' => $name,
+                'code' => strtoupper($code),
                 'description' => $faker->realText(),
                 'color' => $faker->hexColor,
+                'responsible_id' => $faker->numberBetween(1,50),
+                'projecttype_id' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);

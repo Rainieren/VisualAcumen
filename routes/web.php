@@ -24,4 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Dashboard routes
 
 Route::get('/projects', 'ProjectController@index')->name('projects');
-Route::post('/project/create', 'ProjectController@store')->name('create_project');
+Route::post('/projects/create', 'ProjectController@store')->name('create_project');
+Route::get('/projects/{code}', 'ProjectController@show')->name('showProject');
