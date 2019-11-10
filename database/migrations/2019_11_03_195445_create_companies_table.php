@@ -18,6 +18,7 @@ class CreateCompaniesTable extends Migration
             $table->integer('country_id');
             $table->integer('type_id');
             $table->integer('contract_id')->nullable();
+            $table->integer('sidebar_id');
             $table->string('name');
             $table->string('address');
             $table->string('postalcode');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Project;
 use App\ProjectType;
 use App\User;
@@ -20,11 +21,13 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Auth::user()->company->projects;
-        $recent = DB::table('projects')->where('company_id', Auth::user()->company->id)->orderBy('created_at', 'desc')->take(3)->get();
+        $recent = Project::orderBy('created_at', 'desc')->where('company_id', Auth::user()->company->id)->take(3)->get();
+//        $recent = DB::table('projects')->where('company_id', Auth::user()->company->id)->orderBy('created_at', 'desc')->take(3)->get();
         $users = DB::table('users')->where('company_id', Auth::user()->company->id)->get();
+        $clients = Company::where('type_id' , 3)->get();
         $projecttypes = ProjectType::all();
 
-        return view('Project.projects', compact('projects', 'recent', 'users', 'projecttypes'));
+        return view('Project.projects', compact('projects', 'recent', 'users', 'projecttypes', 'clients'));
     }
 
     /**
@@ -46,6 +49,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
 
+        $user = Auth::user();
         $words = explode(" ", request('name'));
         $code = "";
 
@@ -54,12 +58,13 @@ class ProjectController extends Controller
         }
 
         $project = Project::create([
-            'company_id' => Auth::user()->company->id,
+            'company_id' => $user->company->id,
             'name' => request('name'),
             'code' => strtoupper($code),
             'description' => request('description'),
             'color' => request('color'),
-            'responsible_id' => Auth::user()->id,
+            'responsible_id' => $user->id,
+            'client_id' => request('client'),
             'projecttype_id' => request('type')
         ]);
 

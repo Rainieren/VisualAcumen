@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aff4aec6-ff54-445c-8626-b9ff77e37bf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ProjectType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_06_170107_create_project_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ProjectTypesTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Project/projects.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPreferencesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_09_210923_create_sidebars_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SidebarsTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Settings/admin_preferences.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Company.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_03_195445_create_companies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_03_195445_create_companies_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_03_195620_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_03_195620_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/ProjectsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProjectsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Project/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Project/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/base/typography.sass" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/base/typography.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Project/projects.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Project/projects.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,20 +141,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ICT-Hulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\VisualAcumen\app\Models" />
+      <recent name="C:\xampp\htdocs\laravel\VisualAcumen\public" />
+      <recent name="C:\xampp\htdocs\laravel\VisualAcumen\public\assets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravel\VisualAcumen\public\webfonts" />
       <recent name="C:\xampp\htdocs\laravel\VisualAcumen\public\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\VisualAcumen\public" />
-      <recent name="C:\xampp\htdocs\laravel\VisualAcumen\public\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,6 +203,9 @@
       <workItem from="1572978653987" duration="13619000" />
       <workItem from="1573040254644" duration="7164000" />
       <workItem from="1573057567097" duration="4347000" />
+      <workItem from="1573330353683" duration="239000" />
+      <workItem from="1573332653474" duration="4194000" />
+      <workItem from="1573336937180" duration="6727000" />
     </task>
     <servers />
   </component>

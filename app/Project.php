@@ -13,7 +13,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'company_id', 'name', 'description', 'color', 'code', 'responsible_id', 'projecttype_id'
+        'company_id', 'name', 'description', 'color', 'code', 'responsible_id', 'projecttype_id', 'client_id'
     ];
 
     /**
@@ -30,6 +30,22 @@ class Project extends Model
     public function company()
     {
         return $this->belongsTo(Company::class);
+    }
+
+    /*
+     *
+     */
+    public function client()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
+    /*
+     *
+     */
+    public function responsible()
+    {
+        return $this->belongsTo(User::class);
     }
 
     /*

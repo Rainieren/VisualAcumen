@@ -17,9 +17,10 @@ class CompaniesTableSeeder extends Seeder
 
         foreach(range(1,10) as $index) {
             DB::table('companies')->insert([
-                'country_id' => $faker->numberBetween(0, 10),
-                'type_id' => $faker->numberBetween(0, 10),
-                'contract_id' => $faker->numberBetween(0, 10),
+                'country_id' => $faker->numberBetween(1, 10),
+                'type_id' => $faker->numberBetween(1, 10),
+                'contract_id' => $faker->numberBetween(1, 10),
+                'sidebar_id' => $index,
                 'name' => $faker->company,
                 'address' => $faker->streetAddress,
                 'postalcode' => $faker->postcode,

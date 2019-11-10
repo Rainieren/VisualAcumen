@@ -20,7 +20,8 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->string('code');
             $table->text('description');
-            $table->integer('responsible_id');
+            $table->string('responsible_id');
+            $table->string('client_id');
             $table->string('color')->nullable();
             $table->timestamps();
         });

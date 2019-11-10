@@ -28,15 +28,15 @@
                             @endforeach
                         </select>
                     </div>
-{{--                    <div class="form-group">--}}
-{{--                        <label for="client">Assign client <small>Optional</small></label>--}}
-{{--                        <select id="client" class="form-control">--}}
-{{--                            <option selected>Choose...</option>--}}
-{{--                            <option>Siemens</option>--}}
-{{--                            <option>Philips</option>--}}
-{{--                            <option>Samsung</option>--}}
-{{--                        </select>--}}
-{{--                    </div>--}}
+                    <div class="form-group">
+                        <label for="client">Assign client <small>Optional</small></label>
+                        <select id="client" name="client" class="form-control">
+                            <option value="{{ Auth::user()->company->id }}" selected>Choose...</option>
+                            @foreach($clients as $client)
+                                <option value="{{ $client->id }}">{{ $client->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="select-user">Select users</label>
                         <div class="form-row" id="select-user">
@@ -132,7 +132,7 @@
                         </a>
 
                         <div class="card-footer">
-                            <small>People: </small>
+                            <small>Employees: {{ count($recentProject->users ) }}</small>
                         </div>
                     </div>
                 </div>
@@ -144,6 +144,8 @@
         @endif
     </div>
 
+
+
     <div class="row">
         <div class="col-md-12 mb-4">
             <h5>All projects</h5>
@@ -152,23 +154,25 @@
             <table class="table table-sm">
                 <thead>
                 <tr>
-                    <th scope="col"><i class="fas fa-star"></i></th>
+                    <th scope="col"><i class="far fa-star"></i></th>
                     <th scope="col">Name</th>
                     <th scope="col">Code</th>
                     <th scope="col">Type</th>
-                    <th scope="col">Users</th>
+                    <th scope="col">Employer</th>
+                    <th scope="col">Employees</th>
                     <th scope="col">Responsible</th>
                 </tr>
                 </thead>
                 <tbody>
                     @foreach($projects->sortByDesc('created_at') as $project)
                         <tr>
-                            <td></td>
+                            <td><a href=""><i class="far fa-star"></i></a></td>
                             <td><a href="">{{ $project->name }}</a></td>
                             <td>{{ $project->code }}</td>
                             <td>{{ $project->projecttype->name }}</td>
+                            <td>{{ $project->client->name }}</td>
                             <td>{{ count($project->users) }}</td>
-                            <td>{{ $project->responsible_id }}</td>
+                            <td>{{ $project->responsible->firstname }}</td>
                         </tr>
                     @endforeach
                 </tbody>

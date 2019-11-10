@@ -21,4 +21,12 @@ class Company extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    /*
+     *
+     */
+    public function sidebar()
+    {
+        return $this->belongsTo(Sidebar::class);
+    }
 }

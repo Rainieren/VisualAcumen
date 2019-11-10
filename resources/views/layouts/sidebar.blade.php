@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>Visual Acumen</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.css') }}">
 </head>
-<body>
+<body style="background-color: #f9f9f9">
 
 <div class="navigation">
 
-    <nav id="dashboard-sidebar" class="dashboard-sidebar">
+    <nav id="dashboard-sidebar" class="dashboard-sidebar" style="background-color: {{ Auth::user()->company->sidebar->background_color }}">
         <div class="dashboard-sidebar-brand">
-            <h5><a href="../../index.html" class="text-white">Logo bedrijf</a></h5>
+            <h5><a href="{{ route('home') }}" class="text-white">{{ Auth::user()->company->name }}</a></h5>
         </div>
 
         <div class="dashboard-main">
@@ -110,7 +111,7 @@
     </nav>
 
 
-    <nav class="dashboard-sub-sidebar">
+    <nav class="dashboard-sub-sidebar" style="background-color: {{ Auth::user()->company->sidebar->background_color }}">
         <div class="dashboard-sub-sidebar-container">
             <div class="dashboard-sub-top-content text-center text-white">
                 <div class="dashboard-sub-top-logo">
@@ -151,7 +152,7 @@
                             </li>
 
                             <div class="list-title">Admin options</div>
-                            <li class="list-item"><a href="">Preferences</a></li>
+                            <li class="list-item"><a href="{{ route('adminPreferences') }}">Preferences</a></li>
                         </ul>
                     </div>
                 </div>
@@ -204,7 +205,7 @@
 <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/fontawesome.js') }}"></script>
+{{--<script type="text/javascript" src="{{ asset('js/fontawesome.js') }}"></script>--}}
 
 
 </body>

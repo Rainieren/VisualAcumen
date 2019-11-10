@@ -11099,12 +11099,18 @@ a.text-dark:focus {
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
   color: #253858;
   font-weight: 800;
   font-family: 'Noto Sans Regular', 'sans-serif';
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 h5,
@@ -11116,7 +11122,7 @@ h6 {
 
 p {
   color: #42526E;
-  font-weight: 600;
+  font-weight: normal;
   font-family: 'Open Sans', 'sans-serif';
 }
 
@@ -11136,6 +11142,11 @@ small {
 
 .text-blue {
   color: #0052CC;
+}
+
+.sub-text {
+  color: #D1D1D1;
+  font-size: 14px;
 }
 
 .btn.btn-primary {
